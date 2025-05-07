@@ -1,0 +1,29 @@
+
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+
+Description= "Livestock"
+monitoring_council = "PCAARRD"
+
+description = driver.find_element(By.ID, "description")
+description.send_keys(f"{Description}")
+
+monitoring_dropdown= driver.find_element(By.ID, "monitoring_council")
+select = Select(monitoring_dropdown)
+select.select_by_visible_text(f'{monitoring_council}')
+
+active_checkbox =  driver.find_element(By.ID, "checkbox")
+if not active_checkbox.is_selected():
+    active_checkbox.click()
+    print(" Checkbox is ticked")
+
+save_button = driver.find_element(By.ID, "save")
+save_button.click()
+
+
+
+
+
+
