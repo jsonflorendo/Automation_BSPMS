@@ -21,7 +21,7 @@ def handle_form(driver):
 
         # Fill in the "Full Name of Institution" field if empty
         full_name_field = driver.find_element(By.XPATH, "//input[@id='full_name_of_institution']")
-        fill_if_empty(full_name_field, "Example Institution Name 3")
+        fill_if_empty(full_name_field, "Example Institution Name")
 
         # Fill in the "Acronym" field if empty
         acronym_field = driver.find_element(By.XPATH, "//input[@id='acronym']")
