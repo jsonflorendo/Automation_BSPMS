@@ -16,9 +16,11 @@ def main():
     driver = webdriver.Firefox()
 
     try:
+        
         # First form - AP-000 (Continnue with the URL of the first form)
         driver.get(
             'http://10.10.99.18:8005/application/wQ8wUD4Zs6k5mN0NcrprdyEwlLld2558jj3TyZKsU0LleKMLB1Uv7DT9dgae/form001p1.1')
+
         handle_ap_000_form(driver)
         time.sleep(3)  # 3 second delay after AP-000
 

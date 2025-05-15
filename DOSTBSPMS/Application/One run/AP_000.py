@@ -18,7 +18,9 @@ def handle_ap_000_form(driver):
         # ✅ 1. Upload image
         try:
             file_input = driver.find_element(By.XPATH, "//input[@id='photo']")
+
             file_path = r"C:\Users\ITD-OJT-PC\Desktop\Testing materials\DOST Logo.png"
+
             if not file_input.get_attribute("value").strip():
                 file_input.send_keys(file_path)
                 print(f"Image uploaded from: {file_path}")
